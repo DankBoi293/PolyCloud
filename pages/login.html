@@ -27,6 +27,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style type="text/css">
+      .primarybutton:link,.primarybutton{
+        padding: 5px;
+        border-color: #0078d4;
+        border-radius: 5px;
+        text-decoration: none;
+        background-color: #0078d4;
+        color: white;
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+          -webkit-transition: -webkit-transform .3s ease-in-out;
+          transition:         transform .3s ease-in-out;
+
+      }
+      .primarybutton:hover,.primarybutton:active{
+
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
     @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 .login-block{
 float:left;
@@ -45,6 +63,22 @@ padding : 50px 0;
 .login-sec .copy-text a{color:#3273dc;}
 .login-sec h2{margin-bottom:30px; font-weight:300; font-size:30px; color: #3273dc;}
 .button{background: #3273dc; color:#fff; font-weight:300; width: 100px}
+.form-control:hover{
+  border-color: #3273dc;
+  border-width: .10px;
+  webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition:         transform .2s ease-in-out;
+}
+a:link,a:visited{
+  text-decoration: none;
+  color: #3273dc;
+}
+a:hover,a:active{
+  text-decoration: underline;
+
+}
 </style>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -58,15 +92,15 @@ padding : 50px 0;
 		    <form class="login-form">
   <div class="form-group">
     <label for="exampleInputEmail1">Username</label>
-    <input id='user' type="text" class="form-control" placeholder="">
+    <input id='user' type="text" class="form-control" placeholder="Username123">
     
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input id='pass' type="password" class="form-control" placeholder="">
+    <input id='pass' type="password" class="form-control" placeholder="password234">
   </div>
   <div class="form-check">
-	  <a class="button float-right" onclick="page.do('login')"><font color='white'>Login</font></a>
+	  <a class="primarybutton float-right" onclick="page.do('login')"><font color='white'>Login</font></a>
   </div>
   
 </form>  
